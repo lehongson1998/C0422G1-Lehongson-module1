@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đánh giá học lực</title>
+</head>
+<body>
+    <h1>bảng đánh giá học lực</h1>
+    <label><b>Kiểm tra lý thuyết:</b>&nbsp;&nbsp;</label><input type="number" id="lT" placeholder="nhập điểm lý thuyết:"><br><br>
+    <label><b>kiểm tra thực hành:</b></label><input type="number" id="tH" placeholder="nhập điểm thực hành:"><br><br></br>
+    <button type="button" onclick="check()">Kiểm Tra</button>
+    <br>
+    <p id="result">học lực là:</p>
+<script>
+    function check() {
+        let point_lt= parseFloat(document.getElementById("lT").value);
+        let point_th= parseFloat(document.getElementById("tH").value);
+        let dtb = (point_lt + point_th)/2;
+        let result ="";
+        if (dtb>=9){
+            result = "loại giỏi"
+        }else if(dtb>=7){
+            result = "loại khá"
+        }else if (dtb>=6){
+            result ="loại trung bình"
+        }else if (dtb>=5){
+            result ="loại yếu"
+        }else {
+            result ="loại kém"
+        }
+        document.getElementById("result").innerHTML = "điểm tổng kết là:"+dtb + "xếp hạng học lực:"+result;
+
+    }
+</script>
+</body>
+</html>

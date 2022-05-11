@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rl{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <!-- hoa hồng 20% vậy hoa hồng theo danh số bán hàng là dsbh/100*20 -->
+    <h1>Bảng tính hoa hồng doanh số</h1>
+    <label><b>doanh số:(USD) &nbsp;&nbsp;&nbsp;</b></label><input type="number" id="dS" placeholder="nhập doanh số:"><br>
+    <button type="button" onclick="doanh_so()" class="rl">result</button>
+    <p id="result">hoa hồng nhận được:</p>
+<script>
+    function doanh_so() {
+        let doanh_so = parseInt(document.getElementById("dS").value);
+        let hoa_hong = (doanh_so/100)*20;// 20 là 20% hoa hồng nhận được.
+        document.getElementById("result").innerHTML = "hoa hồng nhận được là:" + hoa_hong +"USD"
+
+    }
+</script>
+</body>
+</html>

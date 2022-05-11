@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var n1 = prompt("nhập số A:");
+        var n2 = prompt("nhập số B:");
+        var n3 = prompt("nhập số C:");
+        if(n1==n2 && n1==n3){
+            document.write("3 số bằng nhau =" +n1)
+        }else
+        if (n1>n2){
+            if(n1>n3){
+                document.write("Max = A =" +n1)
+            }else{
+                document.write("Max = C =" +n3)
+            }
+        }else
+            if(n2>n3){
+                document.write("Max = B =" +n2)
+            }else{
+                document.write("Max = C =" +n3)
+            }
+    </script>
+</body>
+</html>
