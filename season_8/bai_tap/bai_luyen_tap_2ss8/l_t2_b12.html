@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lãi suất ngân hàng</title>
+</head>
+<body>
+    <h3>TÍNH LÃI SUẤT NGÂN HÀNG LÃI MẸ ĐẺ LÃI CON</h3>
+    <label>nhập số tiền gốc:(VND)</label>&nbsp;<input type="number" id="principal" placeholder="nhập số tiền gửi"><br><br>
+    <label>nhập số năm gửi :(NĂM)</label>&nbsp;<input type="number" id="year" placeholder="nhập số năm gửi"><br><br>
+    <label>nhập tỉ lệ lãi suất:(%)</label><input type="number" id="interest_rate" placeholder="?%"><br><br>
+    <button type="button" onclick="cl_interest()">tính lãi</button><br><br>
+    <div id="result">.....</div>
+<script>
+    function cl_interest() {
+        let pv = document.getElementById("principal").value;// số vốn ban đầu
+        let i = document.getElementById("interest_rate").value;// lãi suất theo kì(thường tính theo năm)
+        let n = document.getElementById("year").value;// số năm gửi tiết kiệm
+        let fv = pv * (Math.pow((1 + (i/100)),n));//fv là số tiền nhận được ở tương lai năm thứ n
+        document.getElementById("result").innerHTML = "số tiền nhận được sau " + n + "năm là:" + fv + "VND" ;
+
+    }
+</script>
+</body>
+</html>

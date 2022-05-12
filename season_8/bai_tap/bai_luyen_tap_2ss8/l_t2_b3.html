@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh diên tich hinh vuong:</title>
+</head>
+<body>
+    <label>nhập vào cạnh của hình vuông:(m)</label><input type="number" id="a">
+    <br>
+    <button type="button" onclick="on()">tính diện tích</button>
+    <p id="result"></p>
+<script>
+    function on() {
+        let a = parseFloat(document.getElementById("a").value);
+        let s = a * a;
+        document.getElementById("result").innerHTML = "diện tích hình vuông là :" + s + "m<sup>2</sup>";
+    }
+</script>
+
+</body>
+</html>

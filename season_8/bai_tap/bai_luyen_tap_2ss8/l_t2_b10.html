@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>viết chương trình tính giá điện</title>
+</head>
+<body>
+    <h4> bảng tính tiêu thụ điện:</h4>
+    <label>nhập số điện tiêu thụ:(kWh)</label>&nbsp;<input type="number" id="elictronic">&nbsp;
+    <button type="button" onclick="eletron()">tính</button><br>
+    <div id="result"></div>
+<script>
+    const elp = 1536;
+    function eletron() {
+            let elictronic = parseFloat(document.getElementById("elictronic").value);
+            let thanh_toan = elictronic * elp;
+            document.getElementById("result").innerHTML = "số tiền điện phải thanh toán là:" + thanh_toan;
+    }
+</script>
+</body>
+</html>

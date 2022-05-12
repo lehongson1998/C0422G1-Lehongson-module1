@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiemr tra 3 số là cạnh của một tam giác???</title>
+</head>
+<body>
+    <script>
+        let a = parseFloat(prompt("nhập số thứ nhất:"));
+        let b = parseFloat(prompt("nhập số thứ hai:"));
+        let c = parseFloat(prompt("nhập số thứ ba:"));
+        if (a > 0 && b > 0 && c > 0){
+            if (a + b > c){
+                if (b + c > a){
+                    if(a + c > b){
+                        alert("3 số đã nhập là 3 cạnh của 1 tam giác")
+                    }else{
+                        alert("3 số đã nhập không phải là cạnh của tam giác")
+                    }
+                }else {
+                    alert("3 số đã nhập không phải là cạnh của tam giác")
+                }
+            }else {
+                alert("3 số đã nhập không phải là cảnh của tam giác")
+            }
+        }else{
+            alert("3 số đã nhập không phải là cảnh của tam giác")
+        }
+    </script>
+</body>
+</html>

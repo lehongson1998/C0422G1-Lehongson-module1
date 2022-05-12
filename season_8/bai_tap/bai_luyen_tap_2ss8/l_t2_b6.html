@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải phương trình bậc nhất</title>
+</head>
+<body>
+    <h3>giải phương trình bậc nhất ax+b=0</h3>
+    <label>nhập số a:</label>&nbsp;<input type="number" id="num_a"><br>
+    <br>
+    <label>nhập số b:</label>&nbsp;<input type="number" id="num_b"><br>
+    <br>
+    <button type="button" onclick="pt()">tìm nghiệm PT</button>
+    <p id="result"></p>
+<script>
+    function pt() {
+        let a = parseFloat(document.getElementById("num_a").value);
+        let b = parseFloat(document.getElementById("num_b").value);
+        let x = -b/a;
+        document.getElementById("result").innerHTML = "phương trình :"+a+"x+"+ b+"= 0" + "có nghiệm là x=-b/a ="+ x;
+
+    }
+</script>
+</body>
+</html>

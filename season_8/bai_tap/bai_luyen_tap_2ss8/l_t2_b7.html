@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải phương trình bậc 2</title>
+</head>
+<body>
+    <h4>giải phương trình bậc 2:ax<sup>2</sup>+bx+c=0</h4>
+    <b>với điều kiện a khác 0! phương trình mới là phương trình bậc 2!</b><br>
+    <label>nhập a:</label>&nbsp;<input type="number" id="numb_a"><br><br>
+    <label>nhập b:</label>&nbsp;<input type="number" id="numb_b"><br><br>
+    <label>nhập c:</label>&nbsp;<input type="number" id="numb_c"><br>
+    <button type="button" onclick="ptb2()">calculate</button>
+    <div id="result"></div>
+<script>
+    function ptb2() {
+        let a = parseFloat(document.getElementById("numb_a").value);
+        let b = parseFloat(document.getElementById("numb_b").value);
+        let c = parseFloat(document.getElementById("numb_c").value);
+        let delta = (b*b)-(4*a*c);
+        let x1 = ((-b)+ Math.sqrt(delta))/(2*a);
+        let x2 = ((-b)- Math.sqrt(delta))/(2*a);
+        let result = "";
+        alert(delta);
+        if (delta < 0){
+            result = "phương trình vô nghiệm"
+        }else if (delta == 0){
+            result = "phương trình có nghiệm kép x<sub>1</sub>=x<sub>2</sub>="+ (-b/(2*a));
+        }else{
+            result = "phương trình có 2 nghiệm phân biệt:" + "x<sub>1</sub>="+ x1 +"và x<sub>2</sub>="+ x2;
+        }
+        document.getElementById("result").innerHTML = result;
+
+    }
+</script>
+</body>
+</html>
