@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính cước sử dụng điện thoại</title>
+</head>
+<body>
+    <h2>Cước sử dụng điện thoại:</h2>
+    <label>Nhập thời gian gọi điện thoại:(phút)</label>&nbsp;&nbsp;<input type="number" id="times">
+    <br>
+    <button type="button" onclick="kiem_tra()">CHECK</button>
+    <p id="result"></p>
+<script>
+    const GC= 1500;
+    function kiem_tra() {
+        let times = parseFloat(document.getElementById("times").value);
+        let money = times * GC;
+        document.getElementById("result").innerHTML = "Cước thanh toán tiền điện thoại của bạn là:"+ money + "vnd";
+
+
+    }
+</script>
+</body>
+</html>
