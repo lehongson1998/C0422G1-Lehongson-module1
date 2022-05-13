@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm số nguyên</title>
+</head>
+<body>
+    <script>
+       let number = parseInt(prompt("nhập số lượng số nguyên tố cần in ra:"));
+       let count = 0;// biến đếm thứ tự số nguyên tố
+       let countSnt; // biến đếm ước...
+       for (let i = 2 ; i < 1000 ; i++){
+           if (count < number){
+               countSnt=0;
+               for ( j = 1 ; j <= i ; j++){
+                   if ((i%j) == 0){
+                       countSnt += 1;
+                   }
+               }if (countSnt == 2){
+                   document.write(i + "<br>");
+                   count += 1;
+               }
+           }
+       }
+    </script>
+</body>
+</html>
