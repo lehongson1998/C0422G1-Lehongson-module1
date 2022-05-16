@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button type="button" onclick="predict_num()">start</button>
+<script>
+    function predict_num() {
+        let want_num = prompt("nhập khoảng số muốn đoán");
+        let num_random = Math.floor(Math.random() * want_num);
+        let num_check = + prompt("nhập số bạn muốn đoán");
+        let i = 0;
+        while (num_check != num_random){
+            i++;
+            //num_check +=1;
+            if (i == 4){
+                alert("bạn đã hết số lần đoán");
+                break;
+            }else if(num_check < num_random){
+                alert("số bạn đoán bé hơn");
+            }else{
+                alert("số bạn đoán lớn hơn");
+            }num_check = prompt("nhập số bạn đoán")
+        }if (i == 4) {
+            alert("bạn hết số lần đoán!");
+        }else {
+            alert("chúc mừng!!!");
+        }
+    }
+</script>
+</body>
+</html>

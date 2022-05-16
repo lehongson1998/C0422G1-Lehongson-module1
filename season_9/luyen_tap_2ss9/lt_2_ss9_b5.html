@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính lãi ngân hàng lãi mẹ đẻ lãi con trong vòng 12 tháng!</title>
+</head>
+<body>
+    <script>
+        let fv = 0;
+        let pv = parseFloat(prompt("nhập số tiền gửi tiết kiệm ban đầu :"));
+        console.log(pv)
+        const i = (2/100); // lãi suất theo kì 2%;
+        let n; // số kì gửi tiết kiệm (tháng)! ( 12 tháng)
+        for (n = 1 ; n <= 12 ; n++){
+            fv = pv * (Math.pow((1 + i), n));
+        }document.write("số tiền nhận được sau 24 tháng là : &nbsp" + fv);
+    </script>
+</body>
+</html>
