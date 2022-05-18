@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let romaji = prompt("nhập vào 1 mảng:");
+        let arr = romaji.split(" ");
+        var count = 0;
+        for (let i = 0 ; i < arr.length ; i++){
+            if (arr[i] == ""){
+                continue;
+            }
+            count++;
+        }document.write("số từ trong mảng là:"+ " " + count);
+    </script>
+</body>
+</html>

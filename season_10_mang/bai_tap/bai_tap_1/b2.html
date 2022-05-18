@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let in_number = prompt("nhập dẫy số bất kì:");
+        let arrs = in_number.toString();
+        let result = [arrs[0]];
+        for (let i = 1 ; i < arrs.length ; i++){
+            if (arrs[i] % 2 === 0 && arrs[i - 1] % 2 === 0){
+                result.push("-" , arrs[i]);
+            }else {
+                result.push(arrs[i]);
+            }
+        }document.write(result.join(''));
+    </script>
+</body>
+</html>

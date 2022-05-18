@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let in_number = prompt("nhập vào dãy số nguyên bất kì :");
+        let arrs = [];
+        arrs = in_number.split("");
+        let arrsNew = [];
+        for ( let i = arrs.length - 1 ; i >= 0 ; i--){
+            arrsNew.push(arrs[i])
+        }
+        document.write(arrsNew);
+    </script>
+</body>
+</html>

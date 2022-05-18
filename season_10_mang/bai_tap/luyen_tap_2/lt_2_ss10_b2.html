@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let old_Arr =  [ 8 , 9 , 9 , 1 ,'N','O','S','H','L' ];
+        let first = 0;
+        let last = old_Arr.length - 1;
+        while (first < last) {
+            let b = old_Arr[first];
+            old_Arr[first] = old_Arr[last];
+            old_Arr[last] = b;
+            first++;
+            last--;
+        }
+        document.write(old_Arr);
+    </script>
+</body>
+</html>
