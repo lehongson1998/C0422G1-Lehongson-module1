@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hàm 2 tham số</title>
+</head>
+<body>
+    <script>
+        let numberOne = parseFloat(prompt("nhập vào numberOne"));
+        let numberTwo = parseFloat(prompt("nhập vào numberTwo"));
+        function declare(number_1, number_2) {
+            let sum = 0;
+            if (number_1 > number_2){
+                alert("numberOne lớn hơn numberTwo bạn nhé !");
+            }else{
+               sum = number_1 + number_2;
+               document.write('tổng của numberOne và numberTwo là :' + sum);
+               return sum;
+            }
+        }
+        declare(numberOne, numberTwo);
+    </script>
+</body>
+</html>

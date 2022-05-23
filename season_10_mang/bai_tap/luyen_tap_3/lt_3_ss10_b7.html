@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thay đổi mảng</title>
+</head>
+<body>
+    <script>
+       let n = parseInt(prompt('nhập vào n là độ dài của mảng :'));
+       let array = [];
+       for (let i = 0 ; i < n ; i++){
+           array[i] = parseInt(prompt("nhập vào phần tử thứ :" + i + "của mảng"));
+       }
+       document.write("mảng do người dùng nhập vào là :&nbsp" + array + "<br>");
+       let inNum = parseInt(prompt('nhập vào một số nguyên bất kì :'));
+       for (let j = 0 ; j < array.length ; j++){
+           if (inNum % 2 != 0){
+               if (array[j] % 2 == 0){
+                   array[j] += 1;
+               }
+           }else {
+               if (array[j] % 2 != 0 ) {
+                   array[j] += 1;
+               }
+           }
+       }document.write("mảng sau khi thay đổi là :&nbsp"+array);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>number min</title>
+</head>
+<body>
+    <script>
+        function number(a, b, c) {
+            let min = "";
+            if (a < b && a < c){
+                min = a;
+                document.write("MIN = &nbsp; A = &nbsp;" + a);
+            }if (b < a && b < c){
+                min = b;
+                document.write("MIN = &nbsp; B = &nbsp;" + b);
+            }if (c < a && c < b){
+                min = c;
+                document.write("MIN = &nbsp; C = &nbsp;" + c);
+            }
+            return min;
+        }
+        let a = prompt('enter the number A');
+        let b = prompt('enter the number B');
+        let c = prompt('enter the number C');
+        number(a, b, c);
+    </script>
+</body>
+</html>

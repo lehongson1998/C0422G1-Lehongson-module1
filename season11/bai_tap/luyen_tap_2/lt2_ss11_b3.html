@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>INTERGER FACTORIAL</title>
+</head>
+<body>
+    <script>
+        function factorial(interger) {
+            let fac = interger;
+            for (let i = interger - 1 ; i >= 1 ; i--){
+                fac *= i;
+            }
+            document.write("factorial of the entered number :&nbsp;" + fac);
+            return fac;
+        }
+        let input = parseInt(prompt("enter the interger number:"));
+        factorial(input);
+    </script>
+</body>
+</html>

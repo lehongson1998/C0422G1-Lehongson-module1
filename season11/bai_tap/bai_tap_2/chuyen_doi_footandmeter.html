@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi foot và meter</title>
+    <style>
+        #seclect1, #inNum, #result{
+            background-color: green;
+        }
+        #changes{
+            background-color: blueviolet;
+        }
+        #input{
+            background-color: darkturquoise;
+        }
+        #seclect2{
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <label id="input">Nhập vào giá trị:</label>&ensp;<input type="number" id="inNum" placeholder="nhập metter or feet:">
+    <select id="seclect1">
+        <option value="metter">Metter</option>
+        <option value="foot">Feet</option>
+    </select>
+    <select id="seclect2">
+        <option value="metter">Metter</option>
+        <option value="foot">Feet</option>
+    </select>
+    <button type="button" onclick="change()" id="changes">change</button>
+    <p id="result">ouput</p>
+<script>
+    function change() {
+        let input = document.getElementById("inNum").value;
+        let seclect_1 = document.getElementById("seclect1").value;
+        let seclect_2 = document.getElementById("seclect2").value;
+        let result = "";
+        if (seclect_1 == "metter" && seclect_2 == "metter"){
+            result = "kết quả sau khi chuyển đổi là:" + "metter &nbsp;" + input;
+        }
+        if (seclect_1 == "metter" && seclect_2 == "foot"){
+            result = "kết quả sau khi chuyển đổi là:" + "Feet = &nbsp;" + (input * 3.279);
+        }
+        if (seclect_1 == "foot" && seclect_2 == "metter"){
+            result = "kết quả sau khi chuyển đổi là:" + "Metter = &nbsp;" +  (input * 0.305);
+        }
+        if (seclect_1 == "foot" && seclect_2== "foot"){
+            result = "kết quả sau khi chuyển dổi là:" + "foot = &nbsp;" + input;
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+
+</script>
+</body>
+</html>

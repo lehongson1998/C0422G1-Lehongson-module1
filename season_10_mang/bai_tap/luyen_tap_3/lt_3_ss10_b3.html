@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let inNumber = prompt('nhập vào 1 số nguyên:');
+        let count = 0;
+        let countSnt;
+        for (let i = 0 ; i <= inNumber ; i++){
+            if (i == 0 || i == 1){
+                document.write(i + "<br>");
+            }
+            if (count < inNumber) {
+                countSnt = 0;
+                for (let j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        countSnt++;
+                    }
+                    }
+                }
+                if (countSnt >= 3) {
+                document.write(i + "<br>");
+                count++;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #in{
+            width: 200px;
+        }
+        #adds{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<h5>Add New Product</h5>
+<table border="0">
+    <tr>
+        <td>
+            <input type="text" id="in">
+        </td>
+        <td>
+            <button onclick="addProduct()" id="adds">add</button>
+        </td>
+    </tr>
+</table>
+<br>
+<h5>Dissplay All Product</h5>
+<p id="result"></p>
+<script>
+    let arrProduct = ["SonyXperia", "Samsung Galaxy", "Nokia 6", "Xiaomi Redmi Note4"];
+
+    function addProduct() {
+        let productName = document.getElementById("in").value;
+        arrProduct.push(productName);
+        displayProduct();
+    }
+    function displayProduct() {
+        let sout,i,j;
+        sout = "<table border='0' width='500' cellpadding='15' cellspacing='0'>";
+        for(i = 1; i < arrProduct.length ; i++){
+            sout += "<tr>";
+                sout += "<td>" + arrProduct[i] + "</td>" + "<td><button type='button' onclick='edit()'>Edit</button> </td>" + "<td><button type='button' onclick='delete1()'>Delete</button> </td>";
+            sout += "</tr>";
+        }sout += "</table>";
+        document.write(sout);
+    }
+    function delete1(){
+            arrProduct.splice(index, 1);
+            displayProduct();
+    }
+    onclick = displayProduct();
+</script>
+</body>
+</html>

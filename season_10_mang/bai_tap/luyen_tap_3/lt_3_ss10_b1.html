@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+       let arrs = prompt('nhập một chuỗi bất kì:');
+       let inKey = prompt('nhập một kí tự bất kì:');
+       let count = 0;
+       for (let i = 0 ; i < arrs.length ; i++){
+           if (inKey == arrs[i]){
+               count++;
+           }
+       }
+       document.write("số lần xuất hiện của lí tự &nbsp;" + inKey + "&nbsp;trong chuỗi là :&nbsp;" + count + "&nbsp;lần!");
+    </script>
+</body>
+</html>

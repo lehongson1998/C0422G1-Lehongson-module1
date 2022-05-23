@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+<label><b>Fahrenheit</b></label>&nbsp;<input type="number" id="fahrenheit" placeholder="nhập độ F">
+<button type="button" onclick="change()">Change</button>
+<p id="result">degrecelsius</p>
+    <script>
+        function change() {
+            const a = 1.8;
+            let F = parseFloat(document.getElementById("fahrenheit").value);
+            let result = (F - 32)/a;
+            document.getElementById("result").innerHTML = "OutputCelsius = " + result;
+        }
+    </script>
+</body>
+</html>

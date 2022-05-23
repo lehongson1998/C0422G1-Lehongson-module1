@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIRCLE</title>
+</head>
+<body>
+    <script>
+        const PI = 3.14;
+        function area(rad) {
+            let area = rad * rad * PI;
+            document.write("area of circle = &nbsp;" + area + "<br>");
+            return area;
+        }
+        function diameter(rad) {
+            let dia = rad * 2 * PI;
+            document.write("diameter of circle = &nbsp;" + dia + "<br>");
+            return dia;
+        }
+        let radius = prompt("enter the radius:");
+        area(radius);
+        diameter(radius);
+    </script>
+</body>
+</html>

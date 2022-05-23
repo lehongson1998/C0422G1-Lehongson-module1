@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let arr_num = [8, 3, 17, 0, 2, 18, 5];
+        document.write(arr_num + "<br>");
+        for (let i = 0 ; i < arr_num.length ; i++){
+            if (arr_num[i] + arr_num[i + 1] == 20){
+                arr_num[i] = 20;
+                arr_num[i+1] = 20;
+                i++;
+            }
+        }document.write(arr_num);
+    </script>
+</body>
+</html>

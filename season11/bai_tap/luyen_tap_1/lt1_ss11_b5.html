@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>các ngôi sao và chòm sao</title>
+</head>
+<body>
+    <script>
+        let star1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let star2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let result = "";
+        let count = 0;
+        function check_Star(stars) {
+            for (let i = 0 ; i < star1.length ; i++){
+                if (stars == star1[i]){
+                    count++;
+                    for (let j = 0 ; j < star2.length ; j++){
+                        if (i == j){
+                            result = star2[j];
+                            alert("chòm sao tương ứng là:" + result);
+                            return result;
+                        }
+                    }
+                }
+            }
+            if (count == 0){
+                alert("ngôi sao không tồn tại!!!!!!!!!");
+            }
+        }
+        let inputStr = prompt("nhập ngôi sao muốn tìm chòm sao :");
+        check_Star(inputStr);
+    </script>
+</body>
+</html>
