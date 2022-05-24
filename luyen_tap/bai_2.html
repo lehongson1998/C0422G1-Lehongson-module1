@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>vẽ hình tam giác</title>
 </head>
 <body>
-$END$
+<script>
+    for (let row = 1 ; row <= 5 ; row++){
+        for(let col = 0 ; col < row ; col++){
+            if ((row == 3 && col == 1) || (row == 4 && (col == 1 || col == 2))){
+                document.write("&nbsp;&nbsp");
+            }else {
+                document.write("*");
+            }
+        }
+        document.write("<br>")
+    }
+</script>
 </body>
 </html>

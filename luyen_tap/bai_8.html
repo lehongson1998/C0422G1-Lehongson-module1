@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<button type="button" onclick="checkNumberExistArray()">check</button>
+<p id="result2"></p>
+<script>
+    function checkNumberExistArray() {
+        let arrA = [7, 2, 5, 3, 5, 3];
+        let arrB = [7, 2, 5, 4, 6, 3, 5, 3];
+        let arrResult = [];
+        let tmpIndex = 0;
+        let flg;
+        for (let i = 0; i < arrB.length; i++) {
+            flg = true;
+            for (let j = 0; j < arrA.length; j++) {
+                if (arrB[i] == arrA[j]) {
+                    flg = false;
+                    break;
+                }
+            }
+            if (flg) {
+                arrResult[tmpIndex] = arrB[i];
+                tmpIndex++;
+            }
+        }
+        document.getElementById("result2").innerHTML = "Các phần tử trong mảng B "
+            + "không xuất hiện trong mảng A là: [" + arrResult + "]";
+    }
+
+</script>
 </body>
 </html>

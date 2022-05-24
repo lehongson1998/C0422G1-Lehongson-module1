@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>vẽ hình chữ nhật</title>
 </head>
 <body>
-$END$
+    <script>
+        for (let row = 1 ; row <= 4 ; row++){
+            for (let col = 1 ; col <= 5; col++){
+               if ((row == 2 || row == 3 ) && ( col > 1 && col < 5)){
+                   document.write("&nbsp;&nbsp");
+               }else{
+                   document.write("*");
+               }
+            }document.write("<br>")
+        }
+    </script>
 </body>
 </html>

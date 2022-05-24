@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>if and switch case</title>
 </head>
 <body>
-$END$
+<script>
+    let luong = parseFloat(prompt('nhập vào tiền lương:'));
+    document.write('tiền lương ban đầu là :' + luong + "<br>");
+    function check(wage) {
+        let incomme = 0;// thuế thu nhập cá nhân
+        let wages = 0;  // lương thực lãnh
+        if (wage >= 15000000){
+            incomme = wage * (20/100);
+            wages = wage - incomme;
+            document.write("thuế thu nhập là :" + incomme + "<br> tiền lương nhận được là:" + wages);
+        }else if (wage >= 7000000){
+            incomme = wage * (10/100);
+            wages = wage - incomme;
+            document.write("thuế thu nhập là :" + incomme + "<br> tiền lương nhận được là:" + wages);
+        }else{
+            wages = wage
+            document.write("thuế thu nhập là :" + incomme + "<br> tiền lương nhận được là:" + wages);
+        }
+    }
+    check(luong);
+</script>
 </body>
 </html>
