@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vẽ hình chữ nhật lên canvas</title>
+</head>
+<body>
+<script>
+    class Rectanges{
+        width;
+        height;
+        constructor(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+        getWidth(){
+            return this.width;
+        }
+        getHeight(){
+            return this.height;
+        }
+        setWidth(width){
+            this.width = width;
+        }
+        setHeight(height){
+            this.height = height;
+        }
+        getArea(){
+            return this.width * this.height;
+        }
+        getPremetter(){
+            return (this.width + this.height) * 2;
+        }
+    }
+    let myRectange = new Rectanges(150, 50);
+    let width = myRectange.getWidth();
+    let height = myRectange.getHeight();
+    let area = myRectange.getArea();
+    document.write("Width = " + width + "<br>" + "Height = " + height + "<br>" + "Area =" + area + "<br>");
+</script>
+</body>
+</html>
