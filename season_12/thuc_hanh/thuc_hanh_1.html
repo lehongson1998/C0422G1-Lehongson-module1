@@ -2,9 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>xây dựng lớp date</title>
 </head>
 <body>
-$END$
+<script>
+    let myDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+        this.getDay = function () {
+                return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getyear = function () {
+            return this.year;
+        }
+        this.setday = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setyear = function (year) {
+            this.year = year;
+        }
+    }
+    let date = new myDate(24, 5, 2022);
+    date.setday(6);
+    date.setMonth(8);
+    date.setyear(1998);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getyear();
+    document.write('hôm nay là:' + day + "/" + month + "/" + year);
+</script>
 </body>
 </html>
